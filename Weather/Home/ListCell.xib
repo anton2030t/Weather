@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="125" id="Byo-nR-S2m" userLabel="ListCell" customClass="ListCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Byo-nR-S2m" id="MDh-5D-iE9">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rff-JA-w5s" userLabel="backgroundColorView">
+                        <rect key="frame" x="48" y="12" width="311" height="101"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKU-DZ-dVo" userLabel="temperatureLabel">
+                                <rect key="frame" x="237" y="26.5" width="64" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dKU-DZ-dVo" secondAttribute="trailing" constant="10" id="JOC-lC-1ta"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2B-r6-gVl" userLabel="weatherConditionLabel">
+                        <rect key="frame" x="20" y="22.5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="EM4-WS-N3J"/>
+                            <constraint firstAttribute="width" secondItem="W2B-r6-gVl" secondAttribute="height" multiplier="1:1" id="iDI-Wr-6Xm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av5-X5-DMJ" userLabel="cityNameLabel">
+                        <rect key="frame" x="102" y="50.5" width="94" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="W2B-r6-gVl" firstAttribute="centerY" secondItem="rff-JA-w5s" secondAttribute="centerY" id="Fbs-Pq-jX2"/>
+                    <constraint firstAttribute="bottom" secondItem="rff-JA-w5s" secondAttribute="bottom" constant="12" id="Fk6-9w-n3N"/>
+                    <constraint firstAttribute="trailing" secondItem="rff-JA-w5s" secondAttribute="trailing" constant="16" id="M9K-vy-zX4"/>
+                    <constraint firstItem="rff-JA-w5s" firstAttribute="leading" secondItem="MDh-5D-iE9" secondAttribute="leading" constant="48" id="d87-F4-LpO"/>
+                    <constraint firstItem="dKU-DZ-dVo" firstAttribute="centerY" secondItem="W2B-r6-gVl" secondAttribute="centerY" id="m6A-MR-mfp"/>
+                    <constraint firstItem="W2B-r6-gVl" firstAttribute="leading" secondItem="MDh-5D-iE9" secondAttribute="leading" constant="20" id="qed-Wd-DoS"/>
+                    <constraint firstItem="rff-JA-w5s" firstAttribute="top" secondItem="MDh-5D-iE9" secondAttribute="top" constant="12" id="rt6-Jt-eod"/>
+                    <constraint firstItem="av5-X5-DMJ" firstAttribute="leading" secondItem="W2B-r6-gVl" secondAttribute="trailing" constant="2" id="toY-TS-lgB"/>
+                    <constraint firstItem="av5-X5-DMJ" firstAttribute="centerY" secondItem="W2B-r6-gVl" secondAttribute="centerY" id="y0g-Fd-zo3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cityNameLabel" destination="av5-X5-DMJ" id="BPt-zb-kKO"/>
+                <outlet property="temperatureLabel" destination="dKU-DZ-dVo" id="VWA-5Y-gs4"/>
+                <outlet property="weatherConditionLabel" destination="W2B-r6-gVl" id="NPR-MH-VYy"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="153.01339285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
